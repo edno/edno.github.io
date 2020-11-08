@@ -72,13 +72,13 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
+          path: 'website/docs',
           editUrl:
             'https://github.com/edno/edno.github.io/edit/main/docs/',
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
+          path: 'website/blog',
           editUrl:
             'https://github.com/edno/edno.github.io/edit/main/blog/',
         },
