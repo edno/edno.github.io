@@ -1,6 +1,6 @@
 module.exports = {
   title: '@edno',
-  tagline: 'The tagline of my site',
+  tagline: 'A bit of everything learnt from everywhere...',
   favicon: 'img/favicon.ico',
   url: 'https://edno.github.io', // Your website URL
   baseUrl: '/',
@@ -8,61 +8,81 @@ module.exports = {
   organizationName: 'edno',
   onBrokenLinks: 'warn',
   themeConfig: {
+    hideableSidebar: true,
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
+      style: 'dark',
       title: '@edno',
       logo: {
-        alt: '@edno Logo',
+        alt: '@edno',
         src: 'img/favicon-32x32.png',
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Docs',
+          to: 'projects',
+          activeBasePath: 'projects',
+          label: 'Coding',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
+        { to: 'photos', activeBasePath: 'photos', label: 'Photos', position: 'left' },
+        { to: 'me', label: 'About', position: 'left' },
+        {
+          href: 'https://twitter.com/gregoryheitz',
+          label: 'twitter',
+          position: 'right',
+          className: 'icon-link'
+        },
         {
           href: 'https://github.com/edno',
-          label: 'GitHub',
+          label: 'github',
           position: 'right',
+          className: 'icon-link'
+        },
+        {
+          href: 'https://www.npmjs.com/~edno',
+          label: 'npm',
+          position: 'right',
+          className: 'icon-link'
+        },
+        {
+          href: 'https://packagist.org/packages/edno/',
+          label: 'packagist',
+          position: 'right',
+          className: 'icon-link'
+        },
+        {
+          href: 'https://www.flickr.com/photos/edno81',
+          label: 'flickr',
+          position: 'right',
+          className: 'icon-link'
+        },
+        {
+          href: 'http://instagram.com/edno_gh',
+          label: 'instagram',
+          position: 'right',
+          className: 'icon-link'
+        },
+        {
+          href: 'https://www.strava.com/athletes/30049977',
+          label: 'strava',
+          position: 'right',
+          className: 'icon-link'
+        },
+        {
+          href: 'https://www.linkedin.com/in/gheitz/',
+          label: 'linkedin',
+          position: 'right',
+          className: 'icon-link'
         },
       ],
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [],
-        },
-        {
-          title: 'Contact',
-          items: [
-            {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/gheitz/',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/gregoryheitz',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/edno',
-            },
-          ],
-        },
-      ],
       copyright: `Copyright © ${new Date().getFullYear()} Gregory Heitz, Inc. Built with Docusaurus.`,
     },
   },
@@ -71,16 +91,14 @@ module.exports = {
       '@docusaurus/preset-classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          path: 'website/docs',
-          editUrl:
-            'https://github.com/edno/edno.github.io/edit/main/docs/',
+          sidebarPath: require.resolve('./website/projects/sidebars.js'),
+          routeBasePath: "/",
+          path: 'website/',
         },
         blog: {
           showReadingTime: true,
+          routeBasePath: "/blog/",
           path: 'website/blog',
-          editUrl:
-            'https://github.com/edno/edno.github.io/edit/main/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

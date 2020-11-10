@@ -7,13 +7,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary: #5bc0be;
+  --ifm-color-primary-dark: #47b8b6;
+  --ifm-color-primary-darker: #43aeac;
+  --ifm-color-primary-darkest: #378f8d;
+  --ifm-color-primary-light: #6fc8c6;
+  --ifm-color-primary-lighter: #7accca;
+  --ifm-color-primary-lightest: #98d8d6;
   --ifm-code-font-size: 95%;
 }
 
@@ -22,4 +22,60 @@
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+.icon-link {
+  padding: 0 1rem 0 0;
+  display: flex;
+  font-size: 0;
+}
+
+.icon-link:before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  background-repeat: no-repeat;
+}
+
+.icon-link:hover {
+  filter: invert(50%) sepia(69%) saturate(300%) hue-rotate(135deg) brightness(95%) contrast(85%);
+}
+
+.icon-link[href*="github"]:before {
+  background-image: url("/img/github.svg");
+  filter: invert(1);
+}
+
+.icon-link[href*="npm"]:before {
+  background-image: url("/img/npm.svg");
+  filter: invert(1);
+}
+
+.icon-link[href*="packagist"]:before {
+  background-image: url("/img/packagist.svg");
+}
+
+.icon-link[href*="linkedin"]:before {
+  background-image: url("/img/linkedin.svg");
+  filter: invert(1);
+}
+
+.icon-link[href*="twitter"]:before {
+  background-image: url("/img/twitter.svg");
+  filter: invert(1);
+}
+
+.icon-link[href*="flickr"]:before {
+  background-image: url("/img/flickr.svg");
+  filter: invert(1);
+}
+
+.icon-link[href*="strava"]:before {
+  background-image: url("/img/strava.svg");
+  filter: invert(1);
+}
+
+.icon-link[href*="instagram"]:before {
+  background-image: url("/img/instagram.svg");
+  filter: invert(1);
 }
